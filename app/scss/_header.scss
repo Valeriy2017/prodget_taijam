@@ -1,0 +1,147 @@
+@import "vars";
+*{
+  box-sizing: border-box;
+}
+body{
+  font-size: 14px;
+  color: #fff;
+  font-family: $roboto;
+  line-height: 24px;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  padding-inline-start: 0px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+h2{
+  font-size: 15px;
+}
+h2, p{
+  margin: 0;
+  padding: 0;
+}
+
+.header__tiajem{
+  background-image: url(../img/tajem_master.jpg);
+  background-position: top center;
+  background-size: cover;
+  max-width: 1600px;
+  width: 100%;
+  .header__top{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+  }
+  .header__logo{
+    margin-top: 15px;
+  }
+  .header__nav{
+    .checkbox4{
+      display: none;
+    }
+    li{
+    display: inline-block;
+      & + li{
+        margin-left: 22px;
+      }
+      a{
+        font-size: 13px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #fff;
+        &:hover{
+            color: $bluegreen;
+            transition: all 1s;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+        }
+      }
+      .activ{
+        color: $bluegreen;
+      }
+
+    }
+
+  }
+  .header__slaider{
+    padding: 160px 80px 150px 80px;
+    text-align: center;
+    .neader__slaider-title{
+      font-size: 32px;
+      font-weight: 900;
+      font-family: $Playfair;
+      padding-bottom: 26px;
+      position: relative;
+      &::after{
+        content:"";
+        position: absolute;
+        border-bottom: 2px solid $bluegreen;
+        width: 50px;
+        margin: 0px auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+    .header__slaider-text{
+      font-weight: 400;
+      padding-top: 30px;
+      line-height: 30px;
+      font-size: 17px;
+      padding-bottom: 50px;
+    }
+    .section__team-bottom, 
+    .header__slaider-button{
+      padding: 14px 15px;
+      border: 1px solid $bluegreen;
+      font-size: 16px;
+      font-family: $Hammersmith;
+      font-weight: 400;
+      color: $bluegreen;
+      text-transform: uppercase;
+      line-height: 0;
+      cursor: pointer;
+    }
+
+    
+  
+  }
+  button.slick-prev, 
+    button.slick-next{
+      display: none !important;
+    }
+    .slick-dots{
+      bottom: 40px;
+      display: none;
+      li{
+        margin: 0 2px;
+      }
+     li button{
+      border: 1px solid #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 13px;
+      height: 13px;
+      outline: none;      
+      background-color: inherit;
+      border-radius:50%;
+      &::before{
+       content: "";
+      width: 11px;
+      height: 11px;
+      border-radius:50%;
+      }
+     }
+     li.slick-active button:before{
+       background-color: $bluegreen;
+     }
+    }
+}
+
